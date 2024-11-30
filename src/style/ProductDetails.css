@@ -1,0 +1,26 @@
+@media (max-width: 820px) {
+  #product-details .card .row {
+    flex-direction: column;
+  }
+}
+
+#navbar-fixed {
+  position: relative;
+}
+#product-details .card {
+  height: 400px;
+  overflow: hidden;
+}
+
+#product-details .card .col-md-8 {
+  position: relative;
+}
+#product-details .card .col-md-8 .card-body .content {
+  position: absolute;
+  top: 20%;
+}
+
+#product-details .card img {
+  height: 100%;
+  object-fit: contain !important;
+}

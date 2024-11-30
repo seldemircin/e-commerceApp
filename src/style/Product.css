@@ -1,0 +1,26 @@
+.card-body .card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* En fazla 2 satır göster */
+  -webkit-box-orient: vertical;
+}
+
+#product-card {
+  transition: all 0.7s;
+}
+#product-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 18px 40px 4px;
+}
+
+.card-img-top {
+  overflow: hidden;
+}
+
+.card-img-top img {
+  transition: transform 0.3s ease; /* Efektin yumuşak olmasını sağlar */
+}
+
+.card-img-top img:hover {
+  transform: scale(1.1); /* Resmi %10 oranında yakınlaştır */
+}

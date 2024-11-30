@@ -1,0 +1,26 @@
+@media (max-width: 820px) {
+  .navbar-container {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 30px;
+  }
+  .navbar-container .form {
+    width: 100%;
+    justify-content: center;
+  }
+  .navbar-container .relative {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+#navbar-fixed {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  z-index: 1;
+}
+#navbar {
+  padding: 1.3rem;
+}

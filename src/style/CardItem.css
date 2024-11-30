@@ -1,0 +1,7 @@
+#card-item-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* En fazla 1 satır göster */
+  -webkit-box-orient: vertical;
+}
