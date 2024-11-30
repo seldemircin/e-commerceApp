@@ -1,7 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const getCardFromStorage = () => {
+  if (localStorage.getItem("card")) {
+    return JSON.parse(localStorage.getItem("card"));
+  }
+  return [];
+};
+
 const initialState = {
-  productsInCard: [],
+  productsInCard: getCardFromStorage(),
+};
+
+const writeFromCardToStorage = (products) => {
+  localStorage.setItem("card", JSON.stringify(products));
 };
 
 export const cardSlice = createSlice({
@@ -20,6 +31,7 @@ export const cardSlice = createSlice({
       } else {
         // Ürün yoksa, yeni ürünü listeye ekle.
         state.productsInCard.push(action.payload);
+        writeFromCardToStorage(state.productsInCard);
       }
     },
     deleteItemFromCard: (state, action) => {
@@ -27,6 +39,7 @@ export const cardSlice = createSlice({
         (item) => item.id != action.payload.id
       );
       state.productsInCard = [...newCardList];
+      writeFromCardToStorage(state.productsInCard);
     },
   },
 });

@@ -1,10 +1,21 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+const getSelectedProductFromStorage = () => {
+  if (localStorage.getItem("selected")) {
+    return JSON.parse(localStorage.getItem("selected"));
+  }
+  return {};
+};
+
 const initialState = {
   products: [],
-  selectedProduct: {},
+  selectedProduct: getSelectedProductFromStorage(),
   loading: false,
+};
+
+const writeSelectedProductToStorage = (product) => {
+  localStorage.setItem("selected", JSON.stringify(product));
 };
 
 const BASE_URL = "https://fakestoreapi.com";
@@ -20,6 +31,7 @@ export const productSlice = createSlice({
   reducers: {
     setSelectedProduct: (state, action) => {
       state.selectedProduct = action.payload;
+      writeSelectedProductToStorage(state.selectedProduct);
     },
   },
   extraReducers: (builder) => {
