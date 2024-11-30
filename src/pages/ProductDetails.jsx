@@ -44,14 +44,14 @@ function ProductDetails() {
     <div className="container mt-3" id="product-details">
       <div className="card">
         <div className="row">
-          <div className="col-md-4 border-end">
+          <div className="col-12 col-md-4 border-end border-bottom mb-3">
             <img
               src={image}
               className="rounded-start p-4"
               style={{ objectFit: "contain", height: "400px", width: "100%" }}
             />
           </div>
-          <div className="col-md-8">
+          <div className="col-12 col-md-8">
             <div className="card-body">
               <div className="content w-100">
                 <h2 className="fs-4 mb-2 fw-medium w-75">{title}</h2>
