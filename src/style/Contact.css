@@ -1,0 +1,4 @@
+#contact-page input::placeholder,
+#contact-page textarea::placeholder {
+  color: rgb(220, 219, 219) !important;
+}

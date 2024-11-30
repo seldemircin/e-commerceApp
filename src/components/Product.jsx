@@ -14,11 +14,11 @@ function Product({ product }) {
             <img
               src={product.image}
               alt=""
-              className="img-fluid p-2 p-md-3 border-bottom"
+              className="img-fluid p-2 p-md-3"
               style={{ objectFit: "contain", height: "200px", width: "100%" }}
             />
           </div>
-          <div className="card-body">
+          <div className="card-body border-top">
             <h4 className="card-title fw-medium">{product.title}</h4>
             <span
               className={`fw-semibold ${

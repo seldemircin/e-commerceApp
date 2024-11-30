@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 function App() {
   const { productsInCard } = useSelector((store) => store.card);
-
   const calculateTotalPrice = () => {
     let price = 0;
     for (let i = 0; i < productsInCard.length; i++) {

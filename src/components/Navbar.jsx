@@ -234,70 +234,20 @@ const Products = () => {
     <div>
       <div className="flex gap-4">
         <div>
-          <h3 className="mb-2 text-sm font-medium">Categories</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            <Link to={"/product-categories/electronics"}>Electronics</Link>
-          </a>
-          <a href="#" className="mb-1 block text-sm text-neutral-400">
-            <Link to={"/product-categories/jewelery"}>Jewelery</Link>
+            <Link to={"/categories-electronics"}>Electronics</Link>
           </a>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            <Link to={"/product-categories/mens"}> Men's Clothing</Link>
+            <Link to={"/categories-jewelery"}>Jewelery</Link>
           </a>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            <Link to={"/product-categories/womens"}> Women's Clothing</Link>
-          </a>
-        </div>
-
-        <div>
-          <h3 className="mb-2 text-sm font-medium">Enterprise</h3>
-          <a href="#" className="mb-1 block text-sm text-neutral-400">
-            White glove
+            <Link to={"/categories-mens"}> Men's Clothing</Link>
           </a>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            SOX Compliance
-          </a>
-          <a href="#" className="block text-sm text-neutral-400">
-            Staffing
-          </a>
-          <a href="#" className="block text-sm text-neutral-400">
-            More
+            <Link to={"/categories-womens"}> Women's Clothing</Link>
           </a>
         </div>
       </div>
-
-      <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
-        <span>View more</span>
-        <FiArrowRight />
-      </button>
-    </div>
-  );
-};
-
-const Pricing = () => {
-  return (
-    <div className="grid grid-cols-3 gap-4 divide-x divide-neutral-700">
-      <a
-        href="#"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiHome className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Startup</span>
-      </a>
-      <a
-        href="#"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiBarChart2 className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Scaleup</span>
-      </a>
-      <a
-        href="#"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiPieChart className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Enterprise</span>
-      </a>
     </div>
   );
 };
@@ -306,25 +256,21 @@ const Blog = () => {
   return (
     <div>
       <div className="grid grid-cols-2 gap-2">
-        <a href="#">
+        <Link to={"/about"}>
           <h4 className="mb-0.5 text-sm font-medium">About Us</h4>
           <p className="text-xs text-neutral-400">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
             quidem eos.
           </p>
-        </a>
-        <a href="#">
+        </Link>
+        <Link to={"/contact"}>
           <h4 className="mb-0.5 text-sm font-medium">Contact</h4>
           <p className="text-xs text-neutral-400">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
             quidem eos.
           </p>
-        </a>
+        </Link>
       </div>
-      <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
-        <span>View more</span>
-        <FiArrowRight />
-      </button>
     </div>
   );
 };
@@ -333,10 +279,6 @@ const TABS = [
   {
     title: "Products",
     Component: Products,
-  },
-  {
-    title: "Pricing",
-    Component: Pricing,
   },
   {
     title: "Blog",

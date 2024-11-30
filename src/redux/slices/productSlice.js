@@ -8,14 +8,25 @@ const getSelectedProductFromStorage = () => {
   return {};
 };
 
+const getProductsFromStorage = () => {
+  if (localStorage.getItem("products")) {
+    return JSON.parse(localStorage.getItem("products"));
+  }
+  return [];
+};
+
 const initialState = {
-  products: [],
+  products: getProductsFromStorage(),
   selectedProduct: getSelectedProductFromStorage(),
   loading: false,
 };
 
 const writeSelectedProductToStorage = (product) => {
   localStorage.setItem("selected", JSON.stringify(product));
+};
+
+const writeProductsToStorage = (products) => {
+  localStorage.setItem("products", JSON.stringify(products));
 };
 
 const BASE_URL = "https://fakestoreapi.com";
@@ -42,6 +53,7 @@ export const productSlice = createSlice({
     builder.addCase(getAllProducts.fulfilled, (state, action) => {
       state.loading = false;
       state.products = action.payload;
+      writeProductsToStorage(state.products);
     });
   },
 });
