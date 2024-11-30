@@ -36,14 +36,6 @@ export default function Navbar() {
     return count;
   };
 
-  const calculateTotalPrice = () => {
-    let price = 0;
-    for (let i = 0; i < productsInCard.length; i++) {
-      price += productsInCard[i].count * productsInCard[i].price;
-    }
-    return price;
-  };
-
   return (
     <div>
       <div className="bg-neutral-950 text-neutral-200" id="navbar-fixed">
@@ -244,16 +236,16 @@ const Products = () => {
         <div>
           <h3 className="mb-2 text-sm font-medium">Categories</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            Electronics
+            <Link to={"/product-categories/electronics"}>Electronics</Link>
           </a>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            Jewelery
+            <Link to={"/product-categories/jewelery"}>Jewelery</Link>
           </a>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            Men's Clothing
+            <Link to={"/product-categories/mens"}> Men's Clothing</Link>
           </a>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            Women's Clothing
+            <Link to={"/product-categories/womens"}> Women's Clothing</Link>
           </a>
         </div>
 

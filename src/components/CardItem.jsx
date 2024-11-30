@@ -6,6 +6,7 @@ import { deleteItemFromCard } from "../redux/slices/cardSlice";
 
 function CardItem({ product }) {
   let price = product.count * product.price;
+  const { productsInCard } = useSelector((store) => store.card);
   const dispatch = useDispatch();
 
   return (
