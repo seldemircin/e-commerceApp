@@ -9,7 +9,7 @@ function Product({ product }) {
         <Link to={"/product-details/" + product.id}>
           <div className="card-img-top">
             <span className="badge bg-danger fw-medium ms-0 rounded-0 mt-2 rounded-end">
-              İndirim
+              Discount
             </span>
             <img
               src={product.image}
