@@ -147,6 +147,7 @@
 
 html,
 :host {
+  scroll-behavior: smooth;
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;

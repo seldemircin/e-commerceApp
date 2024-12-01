@@ -1,4 +1,10 @@
 #contact-page input::placeholder,
 #contact-page textarea::placeholder {
-  color: rgb(220, 219, 219) !important;
+  color: rgb(167, 164, 164) !important;
+}
+
+#contact-page input,
+#contact-page textarea {
+  border: 1px solid rgb(102, 100, 100);
+  background-color: rgb(40, 40, 40);
 }

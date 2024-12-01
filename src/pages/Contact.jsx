@@ -11,7 +11,10 @@ function Contact() {
       <div className="container p-4" id="contact-page">
         <div className="row row-cols-1 row-cols-md-2 g-4">
           <div className="text-center col">
-            <div className="card bg-dark text-white">
+            <div
+              className="card text-white"
+              style={{ backgroundColor: "#0d0d0d" }}
+            >
               <div className="card-header">
                 <h3 className="card-title fs-4 mt-3">Contact Form</h3>
               </div>
@@ -21,7 +24,7 @@ function Contact() {
                     id="name"
                     name="name"
                     type="text"
-                    className="form-control mb-3 bg-secondary border-1"
+                    className="form-control mb-3"
                     placeholder="Name..."
                   />
                   <ValidationError
@@ -33,7 +36,7 @@ function Contact() {
                     id="surname"
                     name="surname"
                     type="text"
-                    className="form-control mb-3 bg-secondary border-1"
+                    className="form-control mb-3 "
                     placeholder="Surname..."
                   />
                   <ValidationError
@@ -45,7 +48,7 @@ function Contact() {
                     prefix="Email"
                     field="email"
                     type="email"
-                    className="form-control mb-3 bg-secondary border-1"
+                    className="form-control mb-3 "
                     placeholder="Email..."
                   />
                   <ValidationError
@@ -58,7 +61,7 @@ function Contact() {
                     name="message"
                     rows={"5"}
                     cols={"30"}
-                    className="form-control bg-secondary border-1"
+                    className="form-control "
                     placeholder="Message..."
                   />
                   <ValidationError

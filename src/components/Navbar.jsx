@@ -44,7 +44,7 @@ export default function Navbar() {
           id="navbar"
         >
           <Link to={"/"}>
-            <h3>E-Commerce App</h3>
+            <h3 id="navbar-title">E-Commerce App</h3>
           </Link>
           <Tabs />
           <div className="form d-flex">
@@ -62,22 +62,18 @@ export default function Navbar() {
                 <IoSearchOutline />
               </button>
             </form>
-            <button>
-              <IconButton aria-label="cart">
-                <StyledBadge
-                  badgeContent={totalProductCount()}
-                  color="secondary"
-                >
-                  <CiShoppingBasket
-                    className="fs-3 text-white"
-                    data-bs-toggle="offcanvas"
-                    href="#offcanvasExample2"
-                    role="button"
-                    aria-controls="offcanvasExample"
-                  />
-                </StyledBadge>
-              </IconButton>
-            </button>
+
+            <IconButton aria-label="cart">
+              <StyledBadge badgeContent={totalProductCount()} color="secondary">
+                <CiShoppingBasket
+                  className="fs-3 text-white"
+                  data-bs-toggle="offcanvas"
+                  href="#offcanvasExample2"
+                  role="button"
+                  aria-controls="offcanvasExample"
+                />
+              </StyledBadge>
+            </IconButton>
           </div>
         </div>
         <hr />
