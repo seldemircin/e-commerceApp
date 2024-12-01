@@ -8,6 +8,7 @@ import MensClothing from "../pages/MensClothing";
 import WomensClothing from "../pages/WomensClothing";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
+import SearchList from "../components/SearchList";
 
 function RouteConfig() {
   return (
@@ -20,6 +21,7 @@ function RouteConfig() {
       <Route path="/categories-womens" element={<WomensClothing />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/search/:txt" element={<SearchList />} />
     </Routes>
   );
 }

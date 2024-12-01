@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { IoSearchOutline } from "react-icons/io5";
 import "../style/Navbar.css";
 import { CiShoppingBasket } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
@@ -27,6 +27,7 @@ export default function Navbar() {
   }));
 
   const { productsInCard } = useSelector((store) => store.card);
+  const navigate = useNavigate();
 
   const totalProductCount = () => {
     let count = 0;
@@ -48,11 +49,22 @@ export default function Navbar() {
           </Link>
           <Tabs />
           <div className="form d-flex">
-            <form action="" className="d-flex">
+            <form
+              action=""
+              className="d-flex"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const searchQuery = e.target.elements.search.value;
+                navigate("/search/" + searchQuery);
+                e.target.elements.search.value = "";
+              }}
+            >
               <input
                 type="text"
                 className="form-control w-100 rounded-end-0"
                 placeholder="Search"
+                name="search"
+                autocomplete="off"
               />
               <button
                 type="submit"
