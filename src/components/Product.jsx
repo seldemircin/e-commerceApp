@@ -5,7 +5,7 @@ import "../style/Product.css";
 function Product({ product }) {
   return (
     <div className="col">
-      <div className="card border-start-0" id="product-card">
+      <div className="card border-0" id="product-card">
         <Link to={"/product-details/" + product.id}>
           <div className="card-img-top">
             <span className="badge bg-danger fw-medium ms-0 rounded-0 mt-2 rounded-end">
